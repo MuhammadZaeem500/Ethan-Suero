@@ -8,7 +8,7 @@ import Thoughtful from "./components/core/Thoughtful.js";
 import Humble from "./components/core/Humble.js";
 import Frazer from "./components/core/Frazer.js";
 import Common from "./components/core/common.js";
-
+import "./App.css";
 
 function App() {
   return (
