@@ -9,42 +9,44 @@ const ThoughtfulCard = ({ imgSrc, altText, title, description }) => {
   return (
     <Box
       sx={{
-        width: "31%",
-        height: "350px",
-        margin: "10px 0",
-        border: "1px solid black",
+        // Responsive card width: 100% on mobile, 2 per row on tablet, 3 per row on desktop
+        flex: {
+          xs: "100%",
+          sm: "calc(50% - 16px)",
+          md: "calc(33.333% - 16px)",
+        },
+        minHeight: "380px",
+        border: "1px solid rgba(255, 255, 255, 0.2)",
+        backgroundColor: "#000000",
         display: "flex",
         flexDirection: "column",
-        alignItems: "center",
-        justifyContent: "center",
-        padding: "10px 10px",
+        alignItems: "flex-start",
+        justifyContent: "space-between",
+        padding: "24px",
+        boxSizing: "border-box",
       }}
     >
       <img
         src={imgSrc}
         alt={altText}
         style={{
-          width: "200px",
-          height: "200px",
-          objectFit: "cover",
-          marginTop: "100px",
-          marginBottom: "150px",
+          width: "50px",
+          height: "50px",
+          objectFit: "contain",
+          filter: "invert(1)", // Inverts black logos to white for dark theme
         }}
       />
-      <CardContent sx={{ padding: 0, textAlign: "left" }}>
+      <CardContent sx={{ padding: 0, textAlign: "left", width: "100%", mt: 4 }}>
         <Typography
           variant="body1"
-          sx={{ fontWeight: "bold", fontSize: "12px" }}
+          sx={{ fontWeight: "bold", fontSize: "14px", color: "#ffffff", mb: 1 }}
         >
-          {/* Wrap '01/' in a span with opacity */}
+          {/* Wrap number in a span with opacity */}
           <span
             style={{
               opacity: 0.5,
-              fontSize: "7px",
-              // top:0.5,
-              // marginBottom:'500px',
-              // display:'block',
-              // position:'relative',
+              fontSize: "10px",
+              marginRight: "6px",
             }}
           >
             {number}/
@@ -53,9 +55,7 @@ const ThoughtfulCard = ({ imgSrc, altText, title, description }) => {
         </Typography>
         <Typography
           variant="body2"
-          color="textSecondary"
-          textAlign="left"
-          fontSize="10px"
+          sx={{ fontSize: "12px", color: "rgba(255, 255, 255, 0.7)", lineHeight: 1.5 }}
         >
           {description}
         </Typography>
@@ -112,53 +112,66 @@ function Thoughtful() {
   ];
 
   return (
-    <Box sx={{ width: "1000px", height: "800.16px" }}>
+    <Box
+      sx={{
+        width: "100%",
+        minHeight: "100vh",
+        backgroundColor: "#000000",
+        color: "#ffffff",
+        py: { xs: 8, md: 15 },
+        px: { xs: 3, sm: 6, md: 10 },
+        boxSizing: "border-box",
+        overflowX: "hidden",
+      }}
+    >
       {/* Title Section */}
-      <Box sx={{ marginTop: "350px", marginLeft: "430px" }}>
+      <Box
+        sx={{
+          display: "flex",
+          flexDirection: { xs: "column", md: "row" },
+          justifyContent: "space-between",
+          alignItems: { xs: "flex-start", md: "flex-end" },
+          mb: { xs: 6, md: 10 },
+        }}
+      >
         <Typography
           variant="h1"
           sx={{
-            width: "794px",
-            height: "70px",
-            fontSize: "100px",
+            fontSize: { xs: "2.5rem", sm: "4rem", md: "5.5rem" },
             fontWeight: 500,
-            textAlign: "left",
-            marginLeft: "40px",
-            lineHeight: "0.75",
+            lineHeight: 0.95,
+            letterSpacing: "-0.02em",
           }}
         >
           THOUGHTFUL
           <br /> PROCESS
         </Typography>
-        <Box sx={{ marginLeft: "485px", marginTop: "60px" }}>
-          <Typography sx={{ fontSize: "10px" }}>I THINK A LOT</Typography>
+        <Box sx={{ mt: { xs: 2, md: 0 } }}>
+          <Typography sx={{ fontSize: "12px", letterSpacing: "0.1em", opacity: 0.8 }}>
+            I THINK A LOT
+          </Typography>
         </Box>
       </Box>
 
       {/* Cards Section */}
-      <Box sx={{ marginLeft: "25px" }}>
-        <Box
-          sx={{
-            display: "flex",
-            flexWrap: "wrap",
-            justifyContent: "space-between",
-            marginTop: "50px",
-            marginLeft: "50px",
-            // display:'inline',
-            width: "1128px",
-            height: "300px",
-          }}
-        >
-          {cards.map((card, index) => (
-            <ThoughtfulCard
-              key={index}
-              imgSrc={card.imgSrc}
-              altText={card.altText}
-              title={card.title}
-              description={card.description}
-            />
-          ))}
-        </Box>
+      <Box
+        sx={{
+          display: "flex",
+          flexWrap: "wrap",
+          gap: "24px", // Handles spacing evenly instead of tight fixed margins
+          justifyContent: "center",
+          width: "100%",
+        }}
+      >
+        {cards.map((card, index) => (
+          <ThoughtfulCard
+            key={index}
+            imgSrc={card.imgSrc}
+            altText={card.altText}
+            title={card.title}
+            description={card.description}
+          />
+        ))}
       </Box>
     </Box>
   );

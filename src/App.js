@@ -15,14 +15,14 @@ function App() {
     <>
       <div>
         <Navbar />
-        <HeroSection />
+         <HeroSection />
         <About />
         <Clients />
         <Projects />
         <Thoughtful />
         <Humble />
         <Frazer />
-        <Common />
+        <Common /> 
       </div>
     </>
   );

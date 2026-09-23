@@ -5,137 +5,179 @@ function Frazer() {
   return (
     <Box
       sx={{
-        width: "800px",
-        height: "1217.39px",
-        top: "125.34px",
-        position: "relative", // Allows absolute positioning within this container
+        width: "100%",
+        minHeight: "100vh",
+        backgroundColor: "#ffffff", // Pure white background
+        color: "#000000", // Default text black
+        py: { xs: 4, md: 8 },
+        px: { xs: 2, sm: 4, md: 6 },
+        boxSizing: "border-box",
+        display: "flex",
+        justifyContent: "center",
+        alignItems: "center",
       }}
     >
       <Box
         sx={{
-          width: "1200px",
-          height: "650.27px",
-          top: "281.81px",
-          left: "72px",
-          marginLeft: "30px",
-          padding: "2px 0px 0px 0px",
-          border: "2px solid black",
+          width: "100%",
+          maxWidth: "1300px",
+          backgroundColor: "#ffffff",
+          padding: { xs: "15px", md: "2px 0px 0px 0px" },
+          border: "2px solid #000000",
+          boxSizing: "border-box",
         }}
       >
         <Box
           sx={{
             marginTop: "20px",
             textTransform: "uppercase",
-            marginLeft: "10px",
+            px: { xs: 2, md: "10px" },
           }}
         >
           <Typography
+            component="div"
             sx={{
               marginBottom: "20px",
               textTransform: "uppercase",
+              display: "flex",
+              flexWrap: "wrap",
+              gap: { xs: 2, md: "150px" },
             }}
           >
-            <span
-              style={{
-                fontWeight: "bold",
-                fontSize: "12px",
-                marginRight: "2px",
-              }}
-            >
-              Name:{" "}
-            </span>
-            <span
-              style={{
-                fontWeight: "300",
-                fontSize: "12px",
-                marginRight: "150px",
-              }}
-            >
-              Frazer Hurrell
-            </span>
-            <span
-              style={{
-                fontWeight: "bold",
-                fontSize: "12px",
-                marginRight: "2px",
-              }}
-            >
-              ROLE:{" "}
-            </span>
-            <span
-              style={{
-                fontWeight: "300",
-                fontSize: "12px",
-                marginRight: "150px",
-              }}
-            >
-              Creative Technologist
-            </span>
-            <span
-              style={{
-                fontWeight: "bold",
-                fontSize: "12px",
-                marginRight: "2px",
-              }}
-            >
-              Company:{" "}
-            </span>
-            <span
-              style={{
-                fontWeight: "300",
-                fontSize: "12px",
-                marginRight: "150px",
-              }}
-            >
-              Yahoo!
-            </span>
-            <span
-              style={{
-                fontWeight: "bold",
-                fontSize: "12px",
-                marginRight: "2px",
-              }}
-            >
-              Project:{" "}
-            </span>
-            <span style={{ fontWeight: "300", fontSize: "12px" }}>
-              British Airways
-            </span>
+            <Box>
+              <span
+                style={{
+                  fontWeight: "bold",
+                  fontSize: "12px",
+                  marginRight: "2px",
+                  color: "#000000",
+                }}
+              >
+                Name:{" "}
+              </span>
+              <span
+                style={{
+                  fontWeight: "300",
+                  fontSize: "12px",
+                  color: "#555555", // Grey for values
+                }}
+              >
+                Frazer Hurrell
+              </span>
+            </Box>
+            <Box>
+              <span
+                style={{
+                  fontWeight: "bold",
+                  fontSize: "12px",
+                  marginRight: "2px",
+                  color: "#000000",
+                }}
+              >
+                ROLE:{" "}
+              </span>
+              <span
+                style={{
+                  fontWeight: "300",
+                  fontSize: "12px",
+                  color: "#555555",
+                }}
+              >
+                Creative Technologist
+              </span>
+            </Box>
+            <Box>
+              <span
+                style={{
+                  fontWeight: "bold",
+                  fontSize: "12px",
+                  marginRight: "2px",
+                  color: "#000000",
+                }}
+              >
+                Company:{" "}
+              </span>
+              <span
+                style={{
+                  fontWeight: "300",
+                  fontSize: "12px",
+                  color: "#555555",
+                }}
+              >
+                Yahoo!
+              </span>
+            </Box>
+            <Box>
+              <span
+                style={{
+                  fontWeight: "bold",
+                  fontSize: "12px",
+                  marginRight: "2px",
+                  color: "#000000",
+                }}
+              >
+                Project:{" "}
+              </span>
+              <span
+                style={{
+                  fontWeight: "300",
+                  fontSize: "12px",
+                  color: "#555555",
+                }}
+              >
+                British Airways
+              </span>
+            </Box>
           </Typography>
         </Box>
 
         <hr
           style={{
-            width: "1200px",
-            border: "1.15px solid black",
+            width: "100%",
+            border: "1.15px solid #000000",
           }}
         />
 
+        {/* Main Content Area */}
         <Box
           sx={{
-            position: "relative",
-            display: "inline-block",
+            display: "flex",
+            flexDirection: { xs: "column", md: "row" },
+            alignItems: "center",
+            justifyContent: "space-around",
+            padding: { xs: "20px", md: "40px" },
+            gap: "40px",
           }}
         >
           {/* Image */}
-          <img
+          <Box
+            component="img"
             src="/images/Frazer-hurrell-p-1080.jpg.svg"
             alt="Logo"
-            style={{ height: "493px", width: "505px", display: "block" }}
+            sx={{
+              height: { xs: "auto", md: "493px" },
+              width: { xs: "100%", md: "505px" },
+              maxWidth: "100%",
+              objectFit: "cover",
+              display: "block",
+            }}
           />
 
-          {/* Text in front of the image */}
+          {/* Text Content */}
           <Box
             sx={{
-              position: "absolute",
-              top: "20px", // Adjust as needed
-              marginLeft: "630px", // Adjust as needed
-              width: "500px",
-              color: "black", // Text color to contrast against the image
-              marginTop: "150px",
+              width: { xs: "100%", md: "500px" },
+              color: "#000000",
             }}
           >
-            <Typography sx={{ fontWeight: "bold", fontSize: "24px" }}>
+            <Typography
+              sx={{
+                fontWeight: "bold",
+                fontSize: { xs: "18px", md: "24px" },
+                lineHeight: 1.4,
+                color: "#111111", // Deep black for main quote
+              }}
+            >
               From the initial meeting to the final delivery, Ethan has created
               a feeling of trust and delivered everything we asked of him. The
               quality of his work speaks for itself and he is able to execute at
@@ -145,110 +187,116 @@ function Frazer() {
           </Box>
         </Box>
 
-        <img
-          src="/images/Quotes.svg.svg"
-          alt="Quote Icon"
-          style={{
-            height: "70px",
-            width: "70px",
-            marginBottom: "400px",
-            marginLeft: "100px",
-          }}
-        />
+        <Box sx={{ px: { xs: 2, md: "100px" }, py: 2 }}>
+          <img
+            src="/images/Quotes.svg.svg"
+            alt="Quote Icon"
+            style={{
+              height: "70px",
+              width: "70px",
+              display: "block",
+            }}
+          />
+        </Box>
+
         <hr
           style={{
-            width: "1200px",
-            border: "1.15px solid black",
+            width: "100%",
+            border: "1.15px solid #000000",
           }}
         />
+
         <Box
           sx={{
-            width: "1200px",
-            display: "flex", // Make the box a flex container
-            justifyContent: "space-between", // Space arrows evenly
+            width: "100%",
+            display: "flex",
+            justifyContent: "space-between",
             alignItems: "center",
+            py: 2,
+            px: 2,
+            boxSizing: "border-box",
           }}
         >
           <img
             src="/images/Arrow-Outline.svg.svg"
             alt="Left Arrow"
-            style={{ height: "50px", width: "59px", marginLeft: "20px" }}
+            style={{ height: "40px", width: "49px", cursor: "pointer" }}
           />
-          <span style={{ fontSize: "14.4px", marginRight: "2px" }}>01/04 </span>
+          <span style={{ fontSize: "14.4px", color: "#666666" }}>01/04</span>
           <img
             src="/images/Arrow-Outline.svg.svg"
             alt="Right Arrow"
             style={{
-              height: "50px",
-              width: "59px",
+              height: "40px",
+              width: "49px",
               transform: "rotate(180deg)",
-              marginRight: "20px",
+              cursor: "pointer",
             }}
           />
         </Box>
 
         <Box
           sx={{
-            // margin: '47px 100px',
-            marginTop: "200px",
+            marginTop: { xs: "50px", md: "100px" },
+            marginBottom: "50px",
             display: "flex",
-            flexDirection: "column", // Stack elements vertically
+            flexDirection: "column",
             justifyContent: "center",
             alignItems: "center",
+            px: 2,
           }}
         >
           {/* Text Section */}
-          <Box
-            sx={{
-              marginRight: "70px",
-            }}
-          >
+          <Box>
             <Typography
               sx={{
-                textAlign: "center", // Optional: center-align the text
-                marginBottom: "15px", // Add some spacing between text and logos
-                // fontWeight: 'bold',
+                textAlign: "center",
+                marginBottom: "15px",
                 fontSize: "12px",
                 textTransform: "uppercase",
+                color: "#666666", // Muted grey for subheader
               }}
             >
               Worked with some of the best out there
             </Typography>
           </Box>
+
           {/* Logos Section */}
           <Box
             sx={{
-              display: "flex", // Arrange logos in a row
+              display: "flex",
+              flexWrap: "wrap",
               justifyContent: "center",
               alignItems: "center",
-              gap: "60px", // Add consistent spacing between logos
+              gap: { xs: "30px", md: "60px" },
               marginTop: "20px",
+              width: "100%",
             }}
           >
             <img
               src="/images/Hunter-Yeany.svg.svg"
               alt="AdFlux Logo"
-              style={{ height: "33px", width: "123px", marginLeft: "39px" }}
+              style={{ height: "33px", maxWidth: "120px", objectFit: "contain" }}
             />
             <img
               src="/images/Nuu-logo.svg.svg"
               alt="Yahoo Logo"
-              style={{ height: "33px", width: "113px", marginLeft: "28px" }}
+              style={{ height: "33px", maxWidth: "110px", objectFit: "contain" }}
             />
             <img
               src="/images/yahoo-logo.svg"
               alt="Formul Logo"
-              style={{ height: "38px", width: "139px", marginLeft: "28px" }}
+              style={{ height: "38px", maxWidth: "130px", objectFit: "contain" }}
             />
             <img
               src="/images/Exponential.svg.svg"
               alt="Formul Logo"
-              style={{ height: "34px", width: "143px", marginLeft: "28px" }}
+              style={{ height: "34px", maxWidth: "130px", objectFit: "contain" }}
             />
             <img
               src="/images/Group.svg"
               alt="Awwwards Logo"
-              style={{ height: "29px", width: "191px", marginLeft: "28px" }}
+              style={{ height: "29px", maxWidth: "160px", objectFit: "contain" }}
             />
           </Box>
         </Box>

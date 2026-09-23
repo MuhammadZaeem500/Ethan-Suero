@@ -6,87 +6,71 @@ function About() {
   return (
     <Box
       sx={{
-        display: "block",
-        height: "441px",
-        width: "600px",
-        marginLeft: "300px",
-        marginTop: "200px",
-        gap: 2,
-        fontFamily: "inter",
+        width: "100%",
+        maxWidth: "1440px",
+        mx: "auto",
+        px: { xs: 3, sm: 6, md: "150px" },
+        py: { xs: 8, md: "120px" },
+        backgroundColor: "#FFFFFF",
+        boxSizing: "border-box",
       }}
     >
       <Box
         sx={{
-          position: "Absolute",
-          // display: 'flex',
-          marginLeft: "250px",
-          height: "17px",
-          width: "53px",
-          boxSizing: "border-box",
+          display: "flex",
+          flexDirection: { xs: "column", md: "row" },
+          alignItems: "flex-start",
+          gap: { xs: 3, md: 10 },
         }}
       >
-        <Typography
+        {/* Left Column: About Section Label */}
+        <Box
           sx={{
-            fontFamily: "Inter",
-            fontSize: "10px",
-            fontWeight: 500,
-            lineHeight: "32px",
-            letterSpacing: "0.5px",
-            textAlign: "left",
-            textTransform: "uppercase", // Optional: Make "About" all caps
+            minWidth: { md: "100px" },
+            pt: { md: "4px" }, // Tiny optical alignment tweak with the text
           }}
         >
-          About
-        </Typography>
-      </Box>
-      <Box
-        sx={{
-          position: "Absolute",
-          // display: 'flex',
-          marginLeft: "350px",
-          // height:'441px',
-          // width:'600px',
-          boxSizing: "border-box",
-        }}
-      >
-        <Typography
+          <Typography
+            sx={{
+              fontFamily: "Inter, sans-serif",
+              fontSize: "11px",
+              fontWeight: 500,
+              lineHeight: "1.2",
+              letterSpacing: "0.5px",
+              textAlign: "left",
+              textTransform: "uppercase",
+              color: "text.secondary",
+            }}
+          >
+            About
+          </Typography>
+        </Box>
+
+        {/* Right Column: Bio Paragraph Text */}
+        <Box
           sx={{
-            fontFamily: "Inter",
-            fontSize: "38px",
-            fontWeight: 400,
-            lineHeight: "40px",
-            textAlign: "left",
+            maxWidth: "850px",
+            width: "100%",
           }}
         >
-          Ethan Suero is an independent
-        </Typography>
-      </Box>
-      <Box
-        sx={{
-          position: "Absolute",
-          // display: 'flex',
-          marginLeft: "200px",
-          marginTop: "40px",
-          height: "550px",
-          width: "740px",
-          // boxSizing:'border-box',
-          wordSpacing: "5px",
-        }}
-      >
-        <Typography
-          sx={{
-            fontFamily: "inter",
-            fontSize: "38px",
-            fontWeight: 400,
-            lineHeight: "40px",
-            textAlign: "left",
-          }}
-        >
-          designer focused on crafting immersive digital experiences. He
-          believes every project is an opportunity to deliver a unique and
-          memorable digital experience that delights users and builds brand
-          equity.
-        </Typography>
+          <Typography
+            component="p"
+            sx={{
+              fontFamily: "Inter, sans-serif",
+              fontSize: { xs: "1.75rem", sm: "2.2rem", md: "2.375rem" }, // responsive scaling matching ~38px desktop max
+              fontWeight: 400,
+              lineHeight: { xs: 1.3, md: 1.15 },
+              textAlign: "left",
+              color: "#111111",
+              wordSpacing: { md: "3px" },
+            }}
+          >
+            Ethan Suero is an independent designer focused on crafting immersive
+            digital experiences. He believes every project is an opportunity to
+            deliver a unique and memorable digital experience that delights
+            users and builds brand equity.
+          </Typography>
+        </Box>
       </Box>
     </Box>
   );

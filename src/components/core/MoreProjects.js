@@ -6,23 +6,28 @@ function Projects() {
   return (
     <Box
       sx={{
-        width: "600px",
-        height: "100.52px",
-        display: "flex", // Flexbox layout
-        alignItems: "center", // Align items vertically in the center
-        justifyContent: "flex-start", // Align items horizontally to the left
-        // gap: '20px', // Space between element
+        width: "100%",
+        minHeight: "100vh",
+        backgroundColor: "#000000", // Background color set to black
+        display: "flex",
+        flexDirection: { xs: "column", md: "row" }, // Stack vertically on mobile, side-by-side on desktop
+        alignItems: { xs: "flex-start", md: "center" },
+        justifyContent: "flex-start",
         boxSizing: "border-box",
+        p: { xs: 3, sm: 4, md: 6 }, // Responsive padding around the container
+        overflowX: "hidden", // Prevents horizontal scrolling on small screens
       }}
     >
       {/* First Typography */}
       <Typography
         sx={{
-          width: "128px", // Adjusts width to fit content
-          height: "17px", // Adjusts height to fit content
-          fontSize: "12px", // Adjust font size as needed
+          width: { xs: "100%", md: "128px" },
+          fontSize: "12px",
           fontWeight: 500,
-          marginLeft: "50px",
+          letterSpacing: "0.1em",
+          color: "#ffffff", // Text color set to white
+          mb: { xs: 4, md: 0 },
+          ml: { xs: 0, md: "50px" },
         }}
       >
         MORE PROJECTS
@@ -33,107 +38,106 @@ function Projects() {
         sx={{
           display: "flex",
           flexDirection: "column",
-          marginTop: "240px",
+          width: "100%",
+          maxWidth: "1000px",
+          mt: { xs: 0, md: "240px" },
         }}
       >
-        <Box
-          sx={
-            {
-              // marginTop:'80px'
-            }
-          }
-        >
-          <hr
-            style={{
-              marginLeft: "300px",
-              alignItems: "right",
-              width: "800px",
+        {/* Project 1 */}
+        <Box sx={{ width: "100%", my: 2 }}>
+          <Box
+            component="hr"
+            sx={{
+              width: "100%",
+              maxWidth: "800px",
               opacity: "0.3",
+              border: "0.5px solid",
+              borderColor: "#ffffff", // Border color set to white
+              ml: { xs: 0, md: "auto" },
             }}
           />
           <Typography
             variant="h1"
             sx={{
-              width: "794px", // Adjusts width to fit content
-              height: "70px", // Adjusts height to fit content
-              fontSize: "70px", // Same font size as the first Typography for alignment
+              width: "100%",
+              fontSize: { xs: "1.8rem", sm: "2.5rem", md: "70px" },
               fontWeight: 500,
-              textAlign: "right",
+              textAlign: { xs: "left", md: "right" },
               letterSpacing: "0.08em",
-              marginLeft: "80px",
+              color: "#ffffff", // Text color set to white
+              mt: 1,
             }}
           >
             HUNTER YEANY
           </Typography>
         </Box>
-        <Box
-          sx={
-            {
-              // marginTop:'80px'
-            }
-          }
-        >
-          <hr
-            style={{
-              // border: '1px solid black',
-              marginLeft: "300px",
-              alignItems: "right",
-              width: "800px",
+
+        {/* Project 2 */}
+        <Box sx={{ width: "100%", my: 2 }}>
+          <Box
+            component="hr"
+            sx={{
+              width: "100%",
+              maxWidth: "800px",
               opacity: "0.3",
+              border: "0.5px solid",
+              borderColor: "#ffffff", // Border color set to white
+              ml: { xs: 0, md: "auto" },
             }}
           />
           <Typography
             variant="h1"
             sx={{
-              width: "794px", // Adjusts width to fit content
-              height: "70px", // Adjusts height to fit content
-              fontSize: "70px", // Same font size as the first Typography for alignment
+              width: "100%",
+              fontSize: { xs: "1.8rem", sm: "2.5rem", md: "70px" },
               fontWeight: 500,
-              textAlign: "center",
-              marginLeft: "60px",
+              textAlign: { xs: "left", md: "center" },
               letterSpacing: "0.08em",
+              color: "#ffffff", // Text color set to white
+              mt: 1,
             }}
           >
             VELOCE
           </Typography>
         </Box>
-        <Box
-          sx={
-            {
-              // marginTop:'80px'
-            }
-          }
-        >
-          <hr
-            style={{
-              // border: '1px solid black',
-              marginLeft: "300px",
-              alignItems: "right",
-              width: "800px",
+
+        {/* Project 3 */}
+        <Box sx={{ width: "100%", my: 2 }}>
+          <Box
+            component="hr"
+            sx={{
+              width: "100%",
+              maxWidth: "800px",
               opacity: "0.3",
+              border: "0.5px solid",
+              borderColor: "#ffffff", // Border color set to white
+              ml: { xs: 0, md: "auto" },
             }}
           />
           <Typography
             variant="h1"
             sx={{
-              width: "794px", // Adjusts width to fit content
-              height: "70px", // Adjusts height to fit content
-              fontSize: "70px", // Same font size as the first Typography for alignment
+              width: "100%",
+              fontSize: { xs: "1.8rem", sm: "2.5rem", md: "70px" },
               letterSpacing: "0.08em",
               fontWeight: 500,
-              textAlign: "center",
-              marginLeft: "60px",
+              textAlign: { xs: "left", md: "center" },
+              color: "#ffffff", // Text color set to white
+              mt: 1,
             }}
           >
             WALKER
           </Typography>
-          <hr
-            style={{
-              // border: '1px solid black',
-              marginLeft: "300px",
-              alignItems: "right",
-              width: "800px",
+          <Box
+            component="hr"
+            sx={{
+              width: "100%",
+              maxWidth: "800px",
               opacity: "0.3",
+              border: "0.5px solid",
+              borderColor: "#ffffff", // Border color set to white
+              mt: 2,
+              ml: { xs: 0, md: "auto" },
             }}
           />
         </Box>
