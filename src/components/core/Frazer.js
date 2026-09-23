@@ -164,7 +164,7 @@ function Frazer() {
             }}
           >
             <Image
-              src="/images/Frazer-hurrell-p-1080.jpg.svg"
+              src="/images/FrazerHurrellPortrait.svg"
               alt="Frazer Hurrell"
               fill
               style={{ objectFit: "cover" }}
@@ -199,7 +199,7 @@ function Frazer() {
         <Box sx={{ px: { xs: 2, md: "100px" }, py: 2 }}>
           <Box sx={{ position: "relative", width: "70px", height: "70px" }}>
             <Image
-              src="/images/Quotes.svg.svg"
+              src="/images/QuoteMarkIcon.svg"
               alt="Quote Icon"
               fill
               style={{ objectFit: "contain" }}
@@ -227,7 +227,7 @@ function Frazer() {
         >
           <Box sx={{ position: "relative", width: "49px", height: "40px", cursor: "pointer" }}>
             <Image
-              src="/images/Arrow-Outline.svg.svg"
+              src="/images/ArrowOutline.svg"
               alt="Left Arrow"
               fill
               style={{ objectFit: "contain" }}
@@ -244,7 +244,7 @@ function Frazer() {
             }}
           >
             <Image
-              src="/images/Arrow-Outline.svg.svg"
+              src="/images/ArrowOutline.svg"
               alt="Right Arrow"
               fill
               style={{ objectFit: "contain" }}
@@ -292,7 +292,7 @@ function Frazer() {
           >
             <Box sx={{ position: "relative", width: "120px", height: "33px" }}>
               <Image
-                src="/images/AdFlux-logo.svg"
+                src="/images/AdFluxLogo.svg"
                 alt="AdFlux Logo"
                 fill
                 style={{ objectFit: "contain" }}
@@ -300,7 +300,7 @@ function Frazer() {
             </Box>
             <Box sx={{ position: "relative", width: "110px", height: "33px" }}>
               <Image
-                src="/images"
+                src="/images/Yahoo.svg"
                 alt="Yahoo Logo"
                 fill
                 style={{ objectFit: "contain" }}
@@ -308,23 +308,23 @@ function Frazer() {
             </Box>
             <Box sx={{ position: "relative", width: "130px", height: "38px" }}>
               <Image
-                src="/images/yahoo-logo.svg"
-                alt="Formul Logo"
+                src="/images/FiaFormula3Logo.svg"
+                alt="Formula 3 Logo"
                 fill
                 style={{ objectFit: "contain" }}
               />
             </Box>
             <Box sx={{ position: "relative", width: "130px", height: "34px" }}>
               <Image
-                src="/images/Exponential.svg.svg"
-                alt="Formul Logo"
+                src="/images/ExponentialLogo.svg"
+                alt="Exponential Logo"
                 fill
                 style={{ objectFit: "contain" }}
               />
             </Box>
             <Box sx={{ position: "relative", width: "160px", height: "29px" }}>
               <Image
-                src="/images/Group.svg"
+                src="/images/AwwwardsLogo.svg"
                 alt="Awwwards Logo"
                 fill
                 style={{ objectFit: "contain" }}
