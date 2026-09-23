@@ -26,20 +26,31 @@ function Navbar() {
       <List>
         {menuItems.map((item) => (
           <ListItem key={item} disablePadding>
-            <ListItemText primary={item} sx={{ textAlign: "center", my: 1, fontWeight: "500" }} />
+            <ListItemText 
+              primary={item} 
+              sx={{ 
+                textAlign: "center", 
+                my: 1, 
+                "& .MuiTypography-root": { 
+                  fontFamily: "Inter, sans-serif", 
+                  fontWeight: 500 
+                } 
+              }} 
+            />
           </ListItem>
         ))}
         <ListItem sx={{ display: "flex", justifyContent: "center", mt: 2 }}>
           <Button
             variant="text"
             sx={{
-              fontFamily: "inter",
-              fontWeight: "500",
+              fontFamily: "Inter, sans-serif",
+              fontWeight: 500,
               color: "white",
               backgroundColor: "black",
               width: "160px",
               height: "45px",
               borderRadius: "8px",
+              textTransform: "none",
               "&:hover": { backgroundColor: "#333" },
             }}
           >
@@ -98,32 +109,33 @@ function Navbar() {
         >
           <Typography
             variant="body1"
-            sx={{ fontFamily: "inter", fontWeight: "500", padding: "14.5px", cursor: "pointer" }}
+            sx={{ fontFamily: "Inter, sans-serif", fontWeight: 500, padding: "14.5px", cursor: "pointer", color: "text.primary" }}
           >
             Home
           </Typography>
           <Typography
             variant="body1"
-            sx={{ fontFamily: "inter", fontWeight: "500", padding: "17.19px", cursor: "pointer" }}
+            sx={{ fontFamily: "Inter, sans-serif", fontWeight: 500, padding: "17.19px", cursor: "pointer", color: "text.primary" }}
           >
             Work
           </Typography>
           <Typography
             variant="body1"
-            sx={{ fontFamily: "inter", fontWeight: "500", padding: "18.33px", cursor: "pointer" }}
+            sx={{ fontFamily: "Inter, sans-serif", fontWeight: 500, padding: "18.33px", cursor: "pointer", color: "text.primary" }}
           >
             Contact
           </Typography>
           <Button
             variant="text"
             sx={{
-              fontFamily: "inter",
-              fontWeight: "500",
+              fontFamily: "Inter, sans-serif",
+              fontWeight: 500,
               color: "white",
               backgroundColor: "black",
               width: "189px",
               height: "50px",
               borderRadius: "8px",
+              textTransform: "none",
               "&:hover": { backgroundColor: "#333" },
             }}
           >
