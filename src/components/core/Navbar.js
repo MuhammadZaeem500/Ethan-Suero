@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import Image from "next/image";
 import AppBar from "@mui/material/AppBar";
 import Toolbar from "@mui/material/Toolbar";
 import Box from "@mui/material/Box";
@@ -80,22 +79,18 @@ function Navbar() {
           px: { xs: 2, md: 6 },
         }}
       >
+        {/* Logo Container using standard Material-UI Box component image */}
         <Box
+          component="img"
+          src="/images/EthanSueroLogo.svg"
+          alt="Logo"
           sx={{
-            position: "relative",
             width: "92px",
             height: "30px",
+            objectFit: "contain",
             margin: { xs: "0px", md: "0px 60px" },
           }}
-        >
-          <Image
-            src="/images/logo.svg"
-            alt="Logo"
-            fill
-            style={{ objectFit: "contain" }}
-            priority
-          />
-        </Box>
+        />
 
         <Box
           sx={{

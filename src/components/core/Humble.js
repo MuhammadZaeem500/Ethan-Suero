@@ -1,5 +1,4 @@
 import React from "react";
-import Image from "next/image";
 import { Box, Typography } from "@mui/material";
 
 function Humble() {
@@ -48,40 +47,40 @@ function Humble() {
     </Box>
   );
 
-  // Array data for the image reel items to keep code DRY and clean
+  // Array data for the image reel items using verified public paths
   const awardImages = [
     {
-      src: "/images/thinreel-ux-p-800.jpeg.svg",
+      src: "/images/ThinReelUxAward.svg",
       alt: "Thinreel UX Award",
       marginTop: "100px",
     },
     {
-      src: "/images/thinreel-ui-1-p-500.webp.svg",
+      src: "/images/ThinReelInnovationAward.svg",
       alt: "Thinreel UI Award",
       marginTop: "0px",
     },
     {
-      src: "/images/certificate-houston-exponential-hm-p-500.webp.svg",
+      src: "/images/HoustonExponentialCertificate.svg",
       alt: "Houston Exponential Certificate",
       marginTop: "100px",
     },
     {
-      src: "/images/thinreel-innovation-p-800.jpeg.svg",
+      src: "/images/HoustonExponentialUiAward.svg",
       alt: "Thinreel Innovation Award",
       marginTop: "0px",
     },
     {
-      src: "/images/thinreel-ux-p-800.jpeg.svg",
+      src: "/images/HoustonExponentialUxAward.svg",
       alt: "Thinreel UX Award 2",
       marginTop: "100px",
     },
     {
-      src: "/images/thinreel-ui-1-p-500.webp.svg",
+      src: "/images/HoustonExponentialCertificate.svg",
       alt: "Thinreel UI Award 2",
       marginTop: "0px",
     },
     {
-      src: "/images/certificate-houston-exponential-hm-p-500.webp.svg",
+      src: "/images/AtomleUiAward.svg",
       alt: "Houston Exponential Certificate 2",
       marginTop: "100px",
     },
@@ -163,11 +162,15 @@ function Humble() {
                 marginTop: img.marginTop,
               }}
             >
-              <Image
+              <Box
+                component="img"
                 src={img.src}
                 alt={img.alt}
-                fill
-                style={{ objectFit: "cover" }}
+                sx={{
+                  width: "100%",
+                  height: "100%",
+                  objectFit: "cover",
+                }}
               />
             </Box>
           ))}

@@ -1,25 +1,24 @@
 import { Box, Typography } from "@mui/material";
-import Image from "next/image";
 
 const clientsData = [
   {
     name: "Houston Exponential",
     description: "A new digital HUB for Houston’s biggest startup ecosystem.",
-    imageSrc: "/images/div.svg",
+    imageSrc: "/images/TeamGroupPhoto.svg",
     alt: "Houston Exponential Logo",
   },
   {
     name: "Nami ml",
     description:
       "A brand new digital identity and website for the subscription App service that focuses on happy subscribers.",
-    imageSrc: "/images/div1.svg",
+    imageSrc: "/images/UserWithPhone.svg",
     alt: "Nami ML Logo",
   },
   {
     name: "Thin Reel",
     description:
       "How we turned a local studio into one of the biggest video agencies in the south of the UK.",
-    imageSrc: "/images/div2.svg",
+    imageSrc: "/images/FoundersPortrait.svg",
     alt: "Thin Reel Logo",
   },
 ];
@@ -110,7 +109,7 @@ function Clients() {
                 zIndex: 2,
                 width: "100%",
                 maxWidth: { xs: "100%", md: "583.19px" },
-                height: { xs: "250px", md: "350px" }, // Adjusted height container for Next/Image fill
+                height: { xs: "250px", md: "350px" },
                 display: "flex",
                 justifyContent: {
                   xs: "center",
@@ -131,11 +130,13 @@ function Clients() {
                   height: "100%",
                 }}
               >
-                <Image
+                <Box
+                  component="img"
                   src={client.imageSrc}
                   alt={client.alt}
-                  fill
-                  style={{
+                  sx={{
+                    width: "100%",
+                    height: "100%",
                     objectFit: "contain",
                   }}
                 />

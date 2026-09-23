@@ -1,5 +1,4 @@
 import React from "react";
-import Image from "next/image";
 import { Box, Typography, CardContent } from "@mui/material";
 
 // Arrow function for creating a card
@@ -10,7 +9,6 @@ const ThoughtfulCard = ({ imgSrc, altText, title, description }) => {
   return (
     <Box
       sx={{
-        // Responsive card width: 100% on mobile, 2 per row on tablet, 3 per row on desktop
         flex: {
           xs: "100%",
           sm: "calc(50% - 16px)",
@@ -28,22 +26,16 @@ const ThoughtfulCard = ({ imgSrc, altText, title, description }) => {
       }}
     >
       <Box
+        component="img"
+        src={imgSrc}
+        alt={altText}
         sx={{
-          position: "relative",
           width: "50px",
           height: "50px",
+          objectFit: "contain",
           filter: "invert(1)", // Inverts black logos to white for dark theme
         }}
-      >
-        <Image
-          src={imgSrc}
-          alt={altText}
-          fill
-          style={{
-            objectFit: "contain",
-          }}
-        />
-      </Box>
+      />
 
       <CardContent sx={{ padding: 0, textAlign: "left", width: "100%", mt: 4 }}>
         <Typography
@@ -77,42 +69,42 @@ function Thoughtful() {
   // Data for the cards
   const cards = [
     {
-      imgSrc: "/images/logo.svg",
+      imgSrc: "/images/EthanSueroLogo.svg",
       altText: "Card 1",
       title: "01/ANALYSIS",
       description:
         "Live workshop where we define the main problems and challenges before building a strategic plan moving forward.",
     },
     {
-      imgSrc: "/images/logo.svg",
+      imgSrc: "/images/EthanSueroLogo.svg",
       altText: "Card 2",
       title: "02/RESEARCH",
       description:
         "Competitive & Market research with the aim of finding that sweet spot that will set your brand apart.",
     },
     {
-      imgSrc: "/images/logo.svg",
+      imgSrc: "/images/EthanSueroLogo.svg",
       altText: "Card 3",
       title: "03/DESIGN",
       description:
         "Here’s where your digital product starts to become a tangible thing with visual elements and a great UX design.",
     },
     {
-      imgSrc: "/images/logo.svg",
+      imgSrc: "/images/EthanSueroLogo.svg",
       altText: "Card 4",
       title: "04/DEVELOPMENT",
       description:
         "Using Webflow, a no-code tool that allows us full creative development & is easy to manage by your team after launch.",
     },
     {
-      imgSrc: "/images/logo.svg",
+      imgSrc: "/images/EthanSueroLogo.svg",
       altText: "Card 5",
       title: "05/ONBOARDING",
       description:
         "How to update and maintain your new digital product in minutes using no-code tools that are easy to use.",
     },
     {
-      imgSrc: "/images/logo.svg",
+      imgSrc: "/images/EthanSueroLogo.svg",
       altText: "Card 6",
       title: "06/SUPPORT",
       description:
@@ -167,7 +159,7 @@ function Thoughtful() {
         sx={{
           display: "flex",
           flexWrap: "wrap",
-          gap: "24px", // Handles spacing evenly instead of tight fixed margins
+          gap: "24px",
           justifyContent: "center",
           width: "100%",
         }}
