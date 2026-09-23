@@ -1,4 +1,3 @@
-import React from "react";
 import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
 
@@ -18,7 +17,6 @@ export default function HeroSection() {
         py: { xs: 6, md: 8 },
       }}
     >
-      {/* Right Sidebar Badge (Honors) */}
       <Box
         sx={{
           display: { xs: "none", lg: "flex" },
@@ -38,7 +36,7 @@ export default function HeroSection() {
         <Typography
           variant="body1"
           sx={{
-            fontFamily: "Inter, sans-serif",
+            fontFamily: "'Ubuntu', sans-serif",
             color: "white",
             fontWeight: "bold",
             writingMode: "vertical-rl",
@@ -51,7 +49,7 @@ export default function HeroSection() {
         <Typography
           variant="h5"
           sx={{
-            fontFamily: "Inter, sans-serif",
+            fontFamily: "'Ubuntu', sans-serif",
             color: "white",
             fontWeight: "bold",
             transform: "rotate(180deg)",
@@ -61,7 +59,6 @@ export default function HeroSection() {
         </Typography>
       </Box>
 
-      {/* Main Content Wrapper */}
       <Box
         sx={{
           maxWidth: "1440px",
@@ -74,120 +71,116 @@ export default function HeroSection() {
         <Box
           sx={{
             display: "flex",
-            flexDirection: "column",
+            flexDirection: { xs: "column", md: "row" },
+            justifyContent: "space-between",
+            alignItems: { xs: "flex-start", md: "center" },
             width: "100%",
-            maxWidth: "1150px",
-            zIndex: 1,
+            gap: { xs: 4, md: 6 },
           }}
         >
-          <Typography
-            variant="h1"
-            sx={{
-              fontFamily: "Inter, sans-serif",
-              fontWeight: 500,
-              textTransform: "uppercase",
-              lineHeight: 1.05,
-              fontSize: { xs: "1.5rem", sm: "4.2rem", md: "5.8rem" },
-            }}
-          >
-            stunning
-          </Typography>
-          <Typography
-            variant="h1"
-            sx={{
-              fontFamily: "Inter, sans-serif",
-              fontWeight: 500,
-              textTransform: "uppercase",
-              lineHeight: 1.05,
-              fontSize: { xs: "1.5rem", sm: "4.2rem", md: "5.8rem" },
-            }}
-          >
-            brands
-          </Typography>
-
           <Box
             sx={{
               display: "flex",
-              flexDirection: { xs: "column", md: "row" },
-              alignItems: { xs: "flex-start", md: "flex-end" },
-              justifyContent: "flex-start",
-              gap: { xs: 2, md: 6 },
-              width: "100%",
+              flexDirection: "column",
+              width: { xs: "100%", md: "70%" },
+              zIndex: 1,
             }}
           >
             <Typography
               variant="h1"
               sx={{
-                fontFamily: "Inter, sans-serif",
+                fontFamily: "'Ubuntu', sans-serif",
                 fontWeight: 500,
                 textTransform: "uppercase",
                 lineHeight: 1.05,
-                fontSize: { xs: "1.5rem", sm: "4.2rem", md: "5.8rem" },
+                fontSize: { xs: "2.2rem", sm: "4.2rem", md: "5.8rem" },
+              }}
+            >
+              stunning
+            </Typography>
+            <Typography
+              variant="h1"
+              sx={{
+                fontFamily: "'Ubuntu', sans-serif",
+                fontWeight: 500,
+                textTransform: "uppercase",
+                lineHeight: 1.05,
+                fontSize: { xs: "2.2rem", sm: "4.2rem", md: "5.8rem" },
+              }}
+            >
+              brands
+            </Typography>
+            <Typography
+              variant="h1"
+              sx={{
+                fontFamily: "'Ubuntu', sans-serif",
+                fontWeight: 500,
+                textTransform: "uppercase",
+                lineHeight: 1.05,
+                fontSize: { xs: "2.2rem", sm: "4.2rem", md: "5.8rem" },
               }}
             >
               & digital
             </Typography>
-
-            <Box
+            <Typography
+              variant="h1"
               sx={{
-                display: "flex",
-                flexDirection: "column",
-                mt: { xs: 1, md: 0 },
-                mb: { md: "10px" },
+                fontFamily: "'Ubuntu', sans-serif",
+                fontWeight: 500,
+                textTransform: "uppercase",
+                lineHeight: 1.05,
+                fontSize: { xs: "2.2rem", sm: "4.2rem", md: "5.8rem" },
               }}
             >
-              <Typography
-                variant="body2"
-                sx={{
-                  fontFamily: "Inter, sans-serif",
-                  color: "text.secondary",
-                  fontWeight: 500,
-                  fontSize: { xs: "0.85rem", md: "1rem" },
-                }}
-              >
-                freelancer
-              </Typography>
-              <Typography
-                variant="body2"
-                sx={{
-                  fontFamily: "Inter, sans-serif",
-                  color: "text.secondary",
-                  fontWeight: 500,
-                  fontSize: { xs: "0.85rem", md: "1rem" },
-                }}
-              >
-                Digital designer
-              </Typography>
-              <Typography
-                variant="body2"
-                sx={{
-                  fontFamily: "Inter, sans-serif",
-                  color: "text.secondary",
-                  fontWeight: 500,
-                  fontSize: { xs: "0.85rem", md: "1rem" },
-                }}
-              >
-                Webflow expert
-              </Typography>
-            </Box>
+              experiences
+            </Typography>
           </Box>
 
-          <Typography
-            variant="h1"
+          <Box
             sx={{
-              fontFamily: "Inter, sans-serif",
-              fontWeight: 500,
-              textTransform: "uppercase",
-              lineHeight: 1.05,
-              fontSize: { xs: "1.5rem", sm: "4.2rem", md: "5.8rem" },
+              display: "flex",
+              flexDirection: "column",
+              width: { xs: "100%", md: "25%" },
+              gap: 0.5,
             }}
           >
-            experiences
-          </Typography>
+            <Typography
+              variant="body2"
+              sx={{
+                fontFamily: "'Ubuntu', sans-serif",
+                color: "text.secondary",
+                fontWeight: 500,
+                fontSize: { xs: "1rem", md: "1.15rem" },
+              }}
+            >
+              Freelancer
+            </Typography>
+            <Typography
+              variant="body2"
+              sx={{
+                fontFamily: "'Ubuntu', sans-serif",
+                color: "text.secondary",
+                fontWeight: 500,
+                fontSize: { xs: "1rem", md: "1.15rem" },
+              }}
+            >
+              Digital designer
+            </Typography>
+            <Typography
+              variant="body2"
+              sx={{
+                fontFamily: "'Ubuntu', sans-serif",
+                color: "text.secondary",
+                fontWeight: 500,
+                fontSize: { xs: "1rem", md: "1.15rem" },
+              }}
+            >
+              Webflow expert
+            </Typography>
+          </Box>
         </Box>
       </Box>
 
-      {/* Work Seen On Section using clean relative paths */}
       <Box
         sx={{
           maxWidth: "1440px",
@@ -203,7 +196,7 @@ export default function HeroSection() {
       >
         <Typography
           sx={{
-            fontFamily: "Inter, sans-serif",
+            fontFamily: "'Ubuntu', sans-serif",
             textAlign: { xs: "center", md: "left" },
             textTransform: "uppercase",
             fontWeight: 600,

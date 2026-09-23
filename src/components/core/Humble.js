@@ -14,6 +14,7 @@ function Humble() {
       <Typography
         variant="body1"
         sx={{
+          fontFamily: "'Ubuntu', sans-serif",
           fontSize: "11px",
           fontWeight: 500,
           textAlign: { xs: "left", sm: "center" },
@@ -47,7 +48,6 @@ function Humble() {
     </Box>
   );
 
-  // Array data for the image reel items using verified public paths
   const awardImages = [
     {
       src: "/images/ThinReelUxAward.svg",
@@ -101,9 +101,7 @@ function Humble() {
         justifyContent: "center",
       }}
     >
-      {/* Centered wrapper to control large screen layout cleanly */}
       <Box sx={{ width: "100%", maxWidth: "1300px" }}>
-        {/* Title Section */}
         <Box
           sx={{
             display: "flex",
@@ -116,6 +114,7 @@ function Humble() {
           <Typography
             variant="h1"
             sx={{
+              fontFamily: "'Ubuntu', sans-serif",
               width: "100%",
               maxWidth: "794px",
               fontSize: { xs: "2.5rem", sm: "4rem", md: "100px" },
@@ -130,7 +129,14 @@ function Humble() {
             <br /> BAG
           </Typography>
           <Box sx={{ mt: { xs: 3, md: "0" } }}>
-            <Typography sx={{ fontSize: "12px", color: "#ffffff", opacity: 0.8 }}>
+            <Typography
+              sx={{
+                fontFamily: "'Ubuntu', sans-serif",
+                fontSize: "12px",
+                color: "#ffffff",
+                opacity: 0.8,
+              }}
+            >
               I WON SOME AWARDS
               <br />
               ALONG THE WAY
@@ -138,7 +144,6 @@ function Humble() {
           </Box>
         </Box>
 
-        {/* Image Section */}
         <Box
           sx={{
             margin: { xs: "40px 0", md: "47px 0" },
@@ -176,7 +181,6 @@ function Humble() {
           ))}
         </Box>
 
-        {/* Content Sections Below the Images */}
         <Box
           sx={{
             display: "flex",

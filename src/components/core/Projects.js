@@ -1,4 +1,3 @@
-import React from "react";
 import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
 
@@ -8,24 +7,24 @@ function Projects() {
       sx={{
         width: "100%",
         minHeight: "100vh",
-        backgroundColor: "#000000", // Background color set to black
+        backgroundColor: "#000000",
         display: "flex",
-        flexDirection: { xs: "column", md: "row" }, // Stack vertically on mobile, side-by-side on desktop
+        flexDirection: { xs: "column", md: "row" },
         alignItems: { xs: "flex-start", md: "center" },
         justifyContent: "flex-start",
         boxSizing: "border-box",
-        p: { xs: 3, sm: 4, md: 6 }, // Responsive padding around the container
-        overflowX: "hidden", // Prevents horizontal scrolling on small screens
+        p: { xs: 3, sm: 4, md: 6 },
+        overflowX: "hidden",
       }}
     >
-      {/* First Typography */}
       <Typography
         sx={{
           width: { xs: "100%", md: "128px" },
+          fontFamily: "'Ubuntu', sans-serif",
           fontSize: "12px",
           fontWeight: 500,
           letterSpacing: "0.1em",
-          color: "#ffffff", // Text color set to white
+          color: "#ffffff",
           mb: { xs: 4, md: 0 },
           ml: { xs: 0, md: "50px" },
         }}
@@ -33,7 +32,6 @@ function Projects() {
         MORE PROJECTS
       </Typography>
 
-      {/* Second Typography */}
       <Box
         sx={{
           display: "flex",
@@ -43,7 +41,6 @@ function Projects() {
           mt: { xs: 0, md: "240px" },
         }}
       >
-        {/* Project 1 */}
         <Box sx={{ width: "100%", my: 2 }}>
           <Box
             component="hr"
@@ -52,19 +49,19 @@ function Projects() {
               maxWidth: "800px",
               opacity: "0.3",
               border: "0.5px solid",
-              borderColor: "#ffffff", // Border color set to white
+              borderColor: "#ffffff",
               ml: { xs: 0, md: "auto" },
             }}
           />
           <Typography
             variant="h1"
             sx={{
-              width: "100%",
+              fontFamily: "'Ubuntu', sans-serif",
               fontSize: { xs: "1.8rem", sm: "2.5rem", md: "70px" },
               fontWeight: 500,
               textAlign: { xs: "left", md: "right" },
               letterSpacing: "0.08em",
-              color: "#ffffff", // Text color set to white
+              color: "#ffffff",
               mt: 1,
             }}
           >
@@ -72,28 +69,26 @@ function Projects() {
           </Typography>
         </Box>
 
-        {/* Project 2 */}
         <Box sx={{ width: "100%", my: 2 }}>
           <Box
             component="hr"
             sx={{
-              width: "100%",
               maxWidth: "800px",
               opacity: "0.3",
               border: "0.5px solid",
-              borderColor: "#ffffff", // Border color set to white
+              borderColor: "#ffffff",
               ml: { xs: 0, md: "auto" },
             }}
           />
           <Typography
             variant="h1"
             sx={{
-              width: "100%",
+              fontFamily: "'Ubuntu', sans-serif",
               fontSize: { xs: "1.8rem", sm: "2.5rem", md: "70px" },
               fontWeight: 500,
               textAlign: { xs: "left", md: "center" },
               letterSpacing: "0.08em",
-              color: "#ffffff", // Text color set to white
+              color: "#ffffff",
               mt: 1,
             }}
           >
@@ -101,28 +96,27 @@ function Projects() {
           </Typography>
         </Box>
 
-        {/* Project 3 */}
         <Box sx={{ width: "100%", my: 2 }}>
           <Box
             component="hr"
             sx={{
-              width: "100%",
               maxWidth: "800px",
               opacity: "0.3",
               border: "0.5px solid",
-              borderColor: "#ffffff", // Border color set to white
+              borderColor: "#ffffff",
               ml: { xs: 0, md: "auto" },
             }}
           />
           <Typography
             variant="h1"
             sx={{
-              width: "100%",
+              fontFamily: "'Ubuntu', sans-serif",
               fontSize: { xs: "1.8rem", sm: "2.5rem", md: "70px" },
               letterSpacing: "0.08em",
               fontWeight: 500,
               textAlign: { xs: "left", md: "center" },
-              color: "#ffffff", // Text color set to white
+              color: "#ffffff",
+
               mt: 1,
             }}
           >
@@ -131,11 +125,10 @@ function Projects() {
           <Box
             component="hr"
             sx={{
-              width: "100%",
               maxWidth: "800px",
               opacity: "0.3",
               border: "0.5px solid",
-              borderColor: "#ffffff", // Border color set to white
+              borderColor: "#ffffff",
               mt: 2,
               ml: { xs: 0, md: "auto" },
             }}

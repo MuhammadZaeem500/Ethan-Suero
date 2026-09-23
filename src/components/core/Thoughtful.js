@@ -1,9 +1,6 @@
-import React from "react";
 import { Box, Typography, CardContent } from "@mui/material";
 
-// Arrow function for creating a card
 const ThoughtfulCard = ({ imgSrc, altText, title, description }) => {
-  // Split the title into number and text part
   const [number, text] = title.split("/");
 
   return (
@@ -33,16 +30,21 @@ const ThoughtfulCard = ({ imgSrc, altText, title, description }) => {
           width: "50px",
           height: "50px",
           objectFit: "contain",
-          filter: "invert(1)", // Inverts black logos to white for dark theme
+          filter: "invert(1)",
         }}
       />
 
       <CardContent sx={{ padding: 0, textAlign: "left", width: "100%", mt: 4 }}>
         <Typography
           variant="body1"
-          sx={{ fontWeight: "bold", fontSize: "14px", color: "#ffffff", mb: 1 }}
+          sx={{
+            fontFamily: "'Ubuntu', sans-serif",
+            fontWeight: "bold",
+            fontSize: "14px",
+            color: "#ffffff",
+            mb: 1,
+          }}
         >
-          {/* Wrap number in a span with opacity */}
           <span
             style={{
               opacity: 0.5,
@@ -56,7 +58,12 @@ const ThoughtfulCard = ({ imgSrc, altText, title, description }) => {
         </Typography>
         <Typography
           variant="body2"
-          sx={{ fontSize: "12px", color: "rgba(255, 255, 255, 0.7)", lineHeight: 1.5 }}
+          sx={{
+            fontFamily: "'Ubuntu', sans-serif",
+            fontSize: "16px",
+            color: "rgba(255, 255, 255, 0.7)",
+            lineHeight: 1.5,
+          }}
         >
           {description}
         </Typography>
@@ -66,7 +73,6 @@ const ThoughtfulCard = ({ imgSrc, altText, title, description }) => {
 };
 
 function Thoughtful() {
-  // Data for the cards
   const cards = [
     {
       imgSrc: "/images/EthanSueroLogo.svg",
@@ -125,7 +131,6 @@ function Thoughtful() {
         overflowX: "hidden",
       }}
     >
-      {/* Title Section */}
       <Box
         sx={{
           display: "flex",
@@ -138,6 +143,7 @@ function Thoughtful() {
         <Typography
           variant="h1"
           sx={{
+            fontFamily: "'Ubuntu', sans-serif",
             fontSize: { xs: "2.5rem", sm: "4rem", md: "5.5rem" },
             fontWeight: 500,
             lineHeight: 0.95,
@@ -148,13 +154,19 @@ function Thoughtful() {
           <br /> PROCESS
         </Typography>
         <Box sx={{ mt: { xs: 2, md: 0 } }}>
-          <Typography sx={{ fontSize: "12px", letterSpacing: "0.1em", opacity: 0.8 }}>
+          <Typography
+            sx={{
+              fontFamily: "'Ubuntu', sans-serif",
+              fontSize: "12px",
+              letterSpacing: "0.1em",
+              opacity: 0.8,
+            }}
+          >
             I THINK A LOT
           </Typography>
         </Box>
       </Box>
 
-      {/* Cards Section */}
       <Box
         sx={{
           display: "flex",

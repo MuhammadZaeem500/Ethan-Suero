@@ -1,4 +1,3 @@
-import React from "react";
 import { Box, Typography } from "@mui/material";
 import Image from "next/image";
 
@@ -8,8 +7,8 @@ function Frazer() {
       sx={{
         width: "100%",
         minHeight: "100vh",
-        backgroundColor: "#ffffff", // Pure white background
-        color: "#000000", // Default text black
+        backgroundColor: "#ffffff",
+        color: "#000000",
         py: { xs: 4, md: 8 },
         px: { xs: 2, sm: 4, md: 6 },
         boxSizing: "border-box",
@@ -38,6 +37,7 @@ function Frazer() {
           <Typography
             component="div"
             sx={{
+              fontFamily: "'Ubuntu', sans-serif",
               marginBottom: "20px",
               textTransform: "uppercase",
               display: "flex",
@@ -60,7 +60,7 @@ function Frazer() {
                 style={{
                   fontWeight: "300",
                   fontSize: "12px",
-                  color: "#555555", // Grey for values
+                  color: "#555555",
                 }}
               >
                 Frazer Hurrell
@@ -139,7 +139,6 @@ function Frazer() {
           }}
         />
 
-        {/* Main Content Area */}
         <Box
           sx={{
             display: "flex",
@@ -150,7 +149,6 @@ function Frazer() {
             gap: "40px",
           }}
         >
-          {/* Adjusted Image Container */}
           <Box
             sx={{
               position: "relative",
@@ -172,7 +170,6 @@ function Frazer() {
             />
           </Box>
 
-          {/* Text Content */}
           <Box
             sx={{
               width: { xs: "100%", md: "500px" },
@@ -181,10 +178,11 @@ function Frazer() {
           >
             <Typography
               sx={{
+                fontFamily: "'Ubuntu', sans-serif",
                 fontWeight: "bold",
                 fontSize: { xs: "18px", md: "24px" },
                 lineHeight: 1.4,
-                color: "#111111", // Deep black for main quote
+                color: "#111111",
               }}
             >
               From the initial meeting to the final delivery, Ethan has created
@@ -216,44 +214,6 @@ function Frazer() {
 
         <Box
           sx={{
-            width: "100%",
-            display: "flex",
-            justifyContent: "space-between",
-            alignItems: "center",
-            py: 2,
-            px: 2,
-            boxSizing: "border-box",
-          }}
-        >
-          <Box sx={{ position: "relative", width: "49px", height: "40px", cursor: "pointer" }}>
-            <Image
-              src="/images/ArrowOutline.svg"
-              alt="Left Arrow"
-              fill
-              style={{ objectFit: "contain" }}
-            />
-          </Box>
-          <span style={{ fontSize: "14.4px", color: "#666666" }}>01/04</span>
-          <Box
-            sx={{
-              position: "relative",
-              width: "49px",
-              height: "40px",
-              cursor: "pointer",
-              transform: "rotate(180deg)",
-            }}
-          >
-            <Image
-              src="/images/ArrowOutline.svg"
-              alt="Right Arrow"
-              fill
-              style={{ objectFit: "contain" }}
-            />
-          </Box>
-        </Box>
-
-        <Box
-          sx={{
             marginTop: { xs: "50px", md: "100px" },
             marginBottom: "50px",
             display: "flex",
@@ -263,22 +223,21 @@ function Frazer() {
             px: 2,
           }}
         >
-          {/* Text Section */}
           <Box>
             <Typography
               sx={{
+                fontFamily: "'Ubuntu', sans-serif",
                 textAlign: "center",
                 marginBottom: "15px",
                 fontSize: "12px",
                 textTransform: "uppercase",
-                color: "#666666", // Muted grey for subheader
+                color: "#666666",
               }}
             >
               Worked with some of the best out there
             </Typography>
           </Box>
 
-          {/* Logos Section */}
           <Box
             sx={{
               display: "flex",

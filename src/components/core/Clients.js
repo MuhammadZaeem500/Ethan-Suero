@@ -57,7 +57,6 @@ function Clients() {
               gap: { xs: 4, md: 6 },
             }}
           >
-            {/* Text Content */}
             <Box
               sx={{
                 textAlign: "left",
@@ -68,7 +67,7 @@ function Clients() {
               <Typography
                 variant="h6"
                 sx={{
-                  fontFamily: "Inter, sans-serif",
+                  fontFamily: "'Ubuntu', sans-serif",
                   fontWeight: 600,
                   textTransform: "uppercase",
                   fontSize: { xs: "1.1rem", md: "1.25rem" },
@@ -89,7 +88,7 @@ function Clients() {
                 <Typography
                   variant="body2"
                   sx={{
-                    fontFamily: "Inter, sans-serif",
+                    fontFamily: "'Ubuntu', sans-serif",
                     fontWeight: 400,
                     fontSize: { xs: "0.9rem", md: "14px" },
                     lineHeight: "1.6",
@@ -102,7 +101,6 @@ function Clients() {
               </Box>
             </Box>
 
-            {/* Logo Container */}
             <Box
               sx={{
                 position: "relative",

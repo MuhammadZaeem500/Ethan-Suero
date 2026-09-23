@@ -1,4 +1,3 @@
-import React from "react";
 import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
 import FAQAccordion from "./Accordian.js";
@@ -9,23 +8,22 @@ function Common() {
       sx={{
         width: "100%",
         maxWidth: "1300px",
-        margin: "0 auto", // Centers the entire container horizontally on all screens
+        margin: "0 auto",
         mt: { xs: 6, md: "125px" },
         px: { xs: 2, sm: 4, md: 6 },
         boxSizing: "border-box",
-        backgroundColor: "#ffffff", // White background
+        backgroundColor: "#ffffff",
         color: "#000000",
       }}
     >
-      {/* Top Section Header */}
       <Box sx={{ width: "100%", textAlign: { xs: "center", md: "left" } }}>
         <Typography
           variant="h1"
           sx={{
-            fontFamily: "Inter",
+            fontFamily: "'Ubuntu', sans-serif",
             fontWeight: 500,
             textTransform: "uppercase",
-            fontSize: { xs: "40px", sm: "60px", md: "85px" }, // Fluid responsive font sizing
+            fontSize: { xs: "40px", sm: "60px", md: "85px" },
             lineHeight: 1,
           }}
           aria-label="Home"
@@ -33,17 +31,29 @@ function Common() {
           common
         </Typography>
 
-        {/* Subtitle block that shifts right on desktop, centered on mobile */}
         <Box
           sx={{
             ml: { xs: 0, md: "485px" },
             my: { xs: 2, md: 1 },
           }}
         >
-          <Typography sx={{ fontSize: "10px", textTransform: "uppercase", color: "#666666" }}>
+          <Typography
+            sx={{
+              fontFamily: "'Ubuntu', sans-serif",
+              fontSize: "10px",
+              textTransform: "uppercase",
+              color: "#666666",
+            }}
+          >
             Some questions
           </Typography>
-          <Typography sx={{ fontSize: "10px", textTransform: "uppercase", color: "#666666" }}>
+          <Typography
+            sx={{
+              fontSize: "10px",
+              textTransform: "uppercase",
+              color: "#666666",
+            }}
+          >
             PEOPLE USUALLY ASK
           </Typography>
         </Box>
@@ -51,10 +61,10 @@ function Common() {
         <Typography
           variant="h1"
           sx={{
-            fontFamily: "Inter",
+            fontFamily: "'Ubuntu', sans-serif",
             fontWeight: 500,
             textTransform: "uppercase",
-            fontSize: { xs: "40px", sm: "60px", md: "85px" }, // Fluid responsive font sizing
+            fontSize: { xs: "40px", sm: "60px", md: "85px" },
             lineHeight: 1,
             mb: { xs: 4, md: 6 },
           }}
@@ -64,12 +74,10 @@ function Common() {
         </Typography>
       </Box>
 
-      {/* Accordion Component Container */}
       <Box sx={{ width: "100%", mb: 6 }}>
         <FAQAccordion />
       </Box>
 
-      {/* Bottom spacing box */}
       <Box
         sx={{
           backgroundColor: "#ffffff",

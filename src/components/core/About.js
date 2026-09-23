@@ -1,4 +1,3 @@
-import React from "react";
 import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
 
@@ -23,17 +22,16 @@ function About() {
           gap: { xs: 3, md: 10 },
         }}
       >
-        {/* Left Column: About Section Label */}
         <Box
           sx={{
             minWidth: { md: "100px" },
-            pt: { md: "4px" }, // Tiny optical alignment tweak with the text
+            pt: { md: "4px" }, 
           }}
         >
           <Typography
             sx={{
-              fontFamily: "Inter, sans-serif",
-              fontSize: "11px",
+              fontFamily: "'Ubuntu', sans-serif",
+              fontSize: "14px",
               fontWeight: 500,
               lineHeight: "1.2",
               letterSpacing: "0.5px",
@@ -46,7 +44,6 @@ function About() {
           </Typography>
         </Box>
 
-        {/* Right Column: Bio Paragraph Text */}
         <Box
           sx={{
             maxWidth: "850px",
@@ -56,8 +53,8 @@ function About() {
           <Typography
             component="p"
             sx={{
-              fontFamily: "Inter, sans-serif",
-              fontSize: { xs: "1.75rem", sm: "2.2rem", md: "2.375rem" }, // responsive scaling matching ~38px desktop max
+              fontFamily: "'Ubuntu', sans-serif",
+              fontSize: { xs: "1.75rem", sm: "2.2rem", md: "2.375rem" }, 
               fontWeight: 400,
               lineHeight: { xs: 1.3, md: 1.15 },
               textAlign: "left",
