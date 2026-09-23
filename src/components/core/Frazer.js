@@ -292,7 +292,7 @@ function Frazer() {
           >
             <Box sx={{ position: "relative", width: "120px", height: "33px" }}>
               <Image
-                src="/images/Hunter-Yeany.svg.svg"
+                src="/images/AdFlux-logo.svg"
                 alt="AdFlux Logo"
                 fill
                 style={{ objectFit: "contain" }}
@@ -300,7 +300,7 @@ function Frazer() {
             </Box>
             <Box sx={{ position: "relative", width: "110px", height: "33px" }}>
               <Image
-                src="/images/Nuu-logo.svg.svg"
+                src="/images"
                 alt="Yahoo Logo"
                 fill
                 style={{ objectFit: "contain" }}
