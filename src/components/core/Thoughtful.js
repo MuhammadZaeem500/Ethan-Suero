@@ -1,4 +1,5 @@
 import React from "react";
+import Image from "next/image";
 import { Box, Typography, CardContent } from "@mui/material";
 
 // Arrow function for creating a card
@@ -26,16 +27,24 @@ const ThoughtfulCard = ({ imgSrc, altText, title, description }) => {
         boxSizing: "border-box",
       }}
     >
-      <img
-        src={imgSrc}
-        alt={altText}
-        style={{
+      <Box
+        sx={{
+          position: "relative",
           width: "50px",
           height: "50px",
-          objectFit: "contain",
           filter: "invert(1)", // Inverts black logos to white for dark theme
         }}
-      />
+      >
+        <Image
+          src={imgSrc}
+          alt={altText}
+          fill
+          style={{
+            objectFit: "contain",
+          }}
+        />
+      </Box>
+
       <CardContent sx={{ padding: 0, textAlign: "left", width: "100%", mt: 4 }}>
         <Typography
           variant="body1"

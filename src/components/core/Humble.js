@@ -1,4 +1,5 @@
 import React from "react";
+import Image from "next/image";
 import { Box, Typography } from "@mui/material";
 
 function Humble() {
@@ -46,6 +47,45 @@ function Humble() {
       ))}
     </Box>
   );
+
+  // Array data for the image reel items to keep code DRY and clean
+  const awardImages = [
+    {
+      src: "/images/thinreel-ux-p-800.jpeg.svg",
+      alt: "Thinreel UX Award",
+      marginTop: "100px",
+    },
+    {
+      src: "/images/thinreel-ui-1-p-500.webp.svg",
+      alt: "Thinreel UI Award",
+      marginTop: "0px",
+    },
+    {
+      src: "/images/certificate-houston-exponential-hm-p-500.webp.svg",
+      alt: "Houston Exponential Certificate",
+      marginTop: "100px",
+    },
+    {
+      src: "/images/thinreel-innovation-p-800.jpeg.svg",
+      alt: "Thinreel Innovation Award",
+      marginTop: "0px",
+    },
+    {
+      src: "/images/thinreel-ux-p-800.jpeg.svg",
+      alt: "Thinreel UX Award 2",
+      marginTop: "100px",
+    },
+    {
+      src: "/images/thinreel-ui-1-p-500.webp.svg",
+      alt: "Thinreel UI Award 2",
+      marginTop: "0px",
+    },
+    {
+      src: "/images/certificate-houston-exponential-hm-p-500.webp.svg",
+      alt: "Houston Exponential Certificate 2",
+      marginTop: "100px",
+    },
+  ];
 
   return (
     <Box
@@ -112,81 +152,25 @@ function Humble() {
             "&::-webkit-scrollbar": { display: "none" },
           }}
         >
-          <img
-            src="/images/thinreel-ux-p-800.jpeg.svg"
-            alt="Logo"
-            style={{
-              height: "245px",
-              width: "185px",
-              objectFit: "cover",
-              flexShrink: 0,
-              marginLeft: "0px",
-              marginTop: "100px",
-            }}
-          />
-          <img
-            src="/images/thinreel-ui-1-p-500.webp.svg"
-            alt="Logo"
-            style={{
-              height: "245px",
-              width: "185px",
-              objectFit: "cover",
-              flexShrink: 0,
-            }}
-          />
-          <img
-            src="/images/certificate-houston-exponential-hm-p-500.webp.svg"
-            alt="Logo"
-            style={{
-              height: "245px",
-              width: "185px",
-              objectFit: "cover",
-              flexShrink: 0,
-              marginTop: "100px",
-            }}
-          />
-          <img
-            src="/images/thinreel-innovation-p-800.jpeg.svg"
-            alt="Logo"
-            style={{
-              height: "245px",
-              width: "185px",
-              objectFit: "cover",
-              flexShrink: 0,
-            }}
-          />
-          <img
-            src="/images/thinreel-ux-p-800.jpeg.svg"
-            alt="Logo"
-            style={{
-              height: "245px",
-              width: "185px",
-              objectFit: "cover",
-              flexShrink: 0,
-              marginTop: "100px",
-            }}
-          />
-          <img
-            src="/images/thinreel-ui-1-p-500.webp.svg"
-            alt="Logo"
-            style={{
-              height: "245px",
-              width: "185px",
-              objectFit: "cover",
-              flexShrink: 0,
-            }}
-          />
-          <img
-            src="/images/certificate-houston-exponential-hm-p-500.webp.svg"
-            alt="Logo"
-            style={{
-              height: "245px",
-              width: "185px",
-              objectFit: "cover",
-              flexShrink: 0,
-              marginTop: "100px",
-            }}
-          />
+          {awardImages.map((img, index) => (
+            <Box
+              key={index}
+              sx={{
+                position: "relative",
+                width: "185px",
+                height: "245px",
+                flexShrink: 0,
+                marginTop: img.marginTop,
+              }}
+            >
+              <Image
+                src={img.src}
+                alt={img.alt}
+                fill
+                style={{ objectFit: "cover" }}
+              />
+            </Box>
+          ))}
         </Box>
 
         {/* Content Sections Below the Images */}

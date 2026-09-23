@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import Image from "next/image";
 import AppBar from "@mui/material/AppBar";
 import Toolbar from "@mui/material/Toolbar";
 import Box from "@mui/material/Box";
@@ -68,11 +69,20 @@ function Navbar() {
           px: { xs: 2, md: 6 },
         }}
       >
-        <Box sx={{ margin: { xs: "0px", md: "0px 60px" } }}>
-          <img
+        <Box
+          sx={{
+            position: "relative",
+            width: "92px",
+            height: "30px",
+            margin: { xs: "0px", md: "0px 60px" },
+          }}
+        >
+          <Image
             src="/images/logo.svg"
             alt="Logo"
-            style={{ height: "30px", width: "92px" }}
+            fill
+            style={{ objectFit: "contain" }}
+            priority
           />
         </Box>
 

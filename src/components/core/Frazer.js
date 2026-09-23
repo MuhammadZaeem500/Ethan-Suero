@@ -1,5 +1,6 @@
 import React from "react";
 import { Box, Typography } from "@mui/material";
+import Image from "next/image";
 
 function Frazer() {
   return (
@@ -149,19 +150,27 @@ function Frazer() {
             gap: "40px",
           }}
         >
-          {/* Image */}
+          {/* Adjusted Image Container */}
           <Box
-            component="img"
-            src="/images/Frazer-hurrell-p-1080.jpg.svg"
-            alt="Logo"
             sx={{
-              height: { xs: "auto", md: "493px" },
+              position: "relative",
               width: { xs: "100%", md: "505px" },
-              maxWidth: "100%",
-              objectFit: "cover",
-              display: "block",
+              height: { xs: "350px", md: "493px" },
+              display: "flex",
+              justifyContent: "center",
+              alignItems: "center",
+              overflow: "hidden",
+              flexShrink: 0,
             }}
-          />
+          >
+            <Image
+              src="/images/Frazer-hurrell-p-1080.jpg.svg"
+              alt="Frazer Hurrell"
+              fill
+              style={{ objectFit: "cover" }}
+              priority
+            />
+          </Box>
 
           {/* Text Content */}
           <Box
@@ -188,15 +197,14 @@ function Frazer() {
         </Box>
 
         <Box sx={{ px: { xs: 2, md: "100px" }, py: 2 }}>
-          <img
-            src="/images/Quotes.svg.svg"
-            alt="Quote Icon"
-            style={{
-              height: "70px",
-              width: "70px",
-              display: "block",
-            }}
-          />
+          <Box sx={{ position: "relative", width: "70px", height: "70px" }}>
+            <Image
+              src="/images/Quotes.svg.svg"
+              alt="Quote Icon"
+              fill
+              style={{ objectFit: "contain" }}
+            />
+          </Box>
         </Box>
 
         <hr
@@ -217,22 +225,31 @@ function Frazer() {
             boxSizing: "border-box",
           }}
         >
-          <img
-            src="/images/Arrow-Outline.svg.svg"
-            alt="Left Arrow"
-            style={{ height: "40px", width: "49px", cursor: "pointer" }}
-          />
+          <Box sx={{ position: "relative", width: "49px", height: "40px", cursor: "pointer" }}>
+            <Image
+              src="/images/Arrow-Outline.svg.svg"
+              alt="Left Arrow"
+              fill
+              style={{ objectFit: "contain" }}
+            />
+          </Box>
           <span style={{ fontSize: "14.4px", color: "#666666" }}>01/04</span>
-          <img
-            src="/images/Arrow-Outline.svg.svg"
-            alt="Right Arrow"
-            style={{
-              height: "40px",
+          <Box
+            sx={{
+              position: "relative",
               width: "49px",
-              transform: "rotate(180deg)",
+              height: "40px",
               cursor: "pointer",
+              transform: "rotate(180deg)",
             }}
-          />
+          >
+            <Image
+              src="/images/Arrow-Outline.svg.svg"
+              alt="Right Arrow"
+              fill
+              style={{ objectFit: "contain" }}
+            />
+          </Box>
         </Box>
 
         <Box
@@ -273,31 +290,46 @@ function Frazer() {
               width: "100%",
             }}
           >
-            <img
-              src="/images/Hunter-Yeany.svg.svg"
-              alt="AdFlux Logo"
-              style={{ height: "33px", maxWidth: "120px", objectFit: "contain" }}
-            />
-            <img
-              src="/images/Nuu-logo.svg.svg"
-              alt="Yahoo Logo"
-              style={{ height: "33px", maxWidth: "110px", objectFit: "contain" }}
-            />
-            <img
-              src="/images/yahoo-logo.svg"
-              alt="Formul Logo"
-              style={{ height: "38px", maxWidth: "130px", objectFit: "contain" }}
-            />
-            <img
-              src="/images/Exponential.svg.svg"
-              alt="Formul Logo"
-              style={{ height: "34px", maxWidth: "130px", objectFit: "contain" }}
-            />
-            <img
-              src="/images/Group.svg"
-              alt="Awwwards Logo"
-              style={{ height: "29px", maxWidth: "160px", objectFit: "contain" }}
-            />
+            <Box sx={{ position: "relative", width: "120px", height: "33px" }}>
+              <Image
+                src="/images/Hunter-Yeany.svg.svg"
+                alt="AdFlux Logo"
+                fill
+                style={{ objectFit: "contain" }}
+              />
+            </Box>
+            <Box sx={{ position: "relative", width: "110px", height: "33px" }}>
+              <Image
+                src="/images/Nuu-logo.svg.svg"
+                alt="Yahoo Logo"
+                fill
+                style={{ objectFit: "contain" }}
+              />
+            </Box>
+            <Box sx={{ position: "relative", width: "130px", height: "38px" }}>
+              <Image
+                src="/images/yahoo-logo.svg"
+                alt="Formul Logo"
+                fill
+                style={{ objectFit: "contain" }}
+              />
+            </Box>
+            <Box sx={{ position: "relative", width: "130px", height: "34px" }}>
+              <Image
+                src="/images/Exponential.svg.svg"
+                alt="Formul Logo"
+                fill
+                style={{ objectFit: "contain" }}
+              />
+            </Box>
+            <Box sx={{ position: "relative", width: "160px", height: "29px" }}>
+              <Image
+                src="/images/Group.svg"
+                alt="Awwwards Logo"
+                fill
+                style={{ objectFit: "contain" }}
+              />
+            </Box>
           </Box>
         </Box>
       </Box>

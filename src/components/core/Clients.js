@@ -1,5 +1,5 @@
-import React from "react";
 import { Box, Typography } from "@mui/material";
+import Image from "next/image";
 
 const clientsData = [
   {
@@ -63,7 +63,6 @@ function Clients() {
               sx={{
                 textAlign: "left",
                 width: { xs: "100%", md: "400px" },
-                // If it's an even index (row-reverse), add matching margin-left on desktop to preserve spacing
                 ml: { md: isEven ? "100px" : 0 },
               }}
             >
@@ -111,6 +110,7 @@ function Clients() {
                 zIndex: 2,
                 width: "100%",
                 maxWidth: { xs: "100%", md: "583.19px" },
+                height: { xs: "250px", md: "350px" }, // Adjusted height container for Next/Image fill
                 display: "flex",
                 justifyContent: {
                   xs: "center",
@@ -121,18 +121,25 @@ function Clients() {
                 p: { xs: 3, md: 4 },
                 border: "1px solid",
                 borderColor: "grey.100",
+                overflow: "hidden",
               }}
             >
-              <img
-                src={client.imageSrc}
-                alt={client.alt}
-                style={{
+              <Box
+                sx={{
+                  position: "relative",
                   width: "100%",
-                  maxWidth: "583.19px",
-                  height: "auto",
-                  objectFit: "contain",
+                  height: "100%",
                 }}
-              />
+              >
+                <Image
+                  src={client.imageSrc}
+                  alt={client.alt}
+                  fill
+                  style={{
+                    objectFit: "contain",
+                  }}
+                />
+              </Box>
             </Box>
           </Box>
         );
