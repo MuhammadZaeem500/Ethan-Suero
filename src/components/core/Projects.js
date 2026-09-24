@@ -6,7 +6,7 @@ function Projects() {
     <Box
       sx={{
         width: "100%",
-        minHeight: "100vh",
+        minHeight: { xs: "70vh", md: "100vh" },
         backgroundColor: "#000000",
         display: "flex",
         flexDirection: { xs: "column", md: "row" },

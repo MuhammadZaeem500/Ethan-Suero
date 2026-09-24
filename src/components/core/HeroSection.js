@@ -187,7 +187,7 @@ export default function HeroSection() {
           width: "100%",
           mx: "auto",
           px: { xs: 3, sm: 6, md: "150px" },
-          mt: { xs: 6, md: 10 },
+          mt: { xs: 0, md: 4 },
           boxSizing: "border-box",
           display: "flex",
           flexDirection: "column",

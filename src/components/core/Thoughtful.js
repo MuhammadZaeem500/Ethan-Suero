@@ -137,7 +137,7 @@ function Thoughtful() {
           flexDirection: { xs: "column", md: "row" },
           justifyContent: "space-between",
           alignItems: { xs: "flex-start", md: "flex-end" },
-          mb: { xs: 6, md: 10 },
+          mb: { xs: 4, md: 10 },
         }}
       >
         <Typography

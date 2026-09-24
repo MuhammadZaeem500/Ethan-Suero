@@ -16,7 +16,15 @@ function Common() {
         color: "#000000",
       }}
     >
-      <Box sx={{ width: "100%", textAlign: { xs: "center", md: "left" } }}>
+      {/* Parent wrapper set to flex column to control responsive ordering */}
+      <Box
+        sx={{
+          width: "100%",
+          display: "flex",
+          flexDirection: "column",
+          textAlign: { xs: "center", md: "left" },
+        }}
+      >
         <Typography
           variant="h1"
           sx={{
@@ -25,6 +33,7 @@ function Common() {
             textTransform: "uppercase",
             fontSize: { xs: "40px", sm: "60px", md: "85px" },
             lineHeight: 1,
+            order: { xs: 1, md: 1 },
           }}
           aria-label="Home"
         >
@@ -35,6 +44,7 @@ function Common() {
           sx={{
             ml: { xs: 0, md: "485px" },
             my: { xs: 2, md: 1 },
+            order: { xs: 3, md: 2 }, // Pushes it below Questions on small screens, keeps it in the middle on desktop
           }}
         >
           <Typography
@@ -67,6 +77,7 @@ function Common() {
             fontSize: { xs: "40px", sm: "60px", md: "85px" },
             lineHeight: 1,
             mb: { xs: 4, md: 6 },
+            order: { xs: 2, md: 3 }, // Appears right after "common" on small screens so they read together as "common Questions"
           }}
           aria-label="Work"
         >
